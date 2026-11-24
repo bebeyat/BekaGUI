@@ -149,7 +149,7 @@ Build a menu once and open it for as many players as you like. Each opening gets
 
 ### Dynamic content, state and live updates
 
-<img src="docs/images/counter.gif" alt="Live counter: the title and items change in the same window" align="right" width="360">
+<p align="center"><img src="docs/images/counter.gif" alt="Live counter: the title and items change in the same window" width="420"></p>
 
 ```java
 Menu counter = Menu.builder()
@@ -175,11 +175,9 @@ Menu counter = Menu.builder()
         .build();
 ```
 
-<br clear="right">
-
 ### Pages
 
-<img src="docs/images/pages.gif" alt="Paging: arrows change only the items and the title" align="right" width="360">
+<p align="center"><img src="docs/images/pages.gif" alt="Paging: arrows change only the items and the title" width="320"></p>
 
 ```java
 Menu list = Menu.builder()
@@ -197,8 +195,6 @@ Menu list = Menu.builder()
         .build();
 ```
 
-<br clear="right">
-
 ### Confirm dialog with back
 
 `click.open(other)` remembers the current menu. `click.back()` returns to it **with its state** (page, selection).
@@ -214,7 +210,7 @@ Menu confirm = Menu.builder()
 
 ### Text input
 
-<img src="docs/images/text-input.gif" alt="Typing in the anvil, then the results open in the same window" align="right" width="360">
+<p align="center"><img src="docs/images/text-input.gif" alt="Typing in the anvil, then the results open in the same window" width="420"></p>
 
 ```java
 TextInput.create()
@@ -229,11 +225,9 @@ Opens over the current menu without closing it, and the menu stays in the back h
 anvil stays open until you open something else, so invalid input can simply be ignored.
 Needs Paper, or Spigot 1.21+.
 
-<br clear="right">
-
 ### Everything a click can do
 
-| | |
+| Method | What it does |
 |---|---|
 | `click.player()`, `click.view()`, `click.slot()`, `click.type()` | who, where, how |
 | `click.isLeft()`, `click.isRight()`, `click.isShift()` | click type |
@@ -245,7 +239,7 @@ Needs Paper, or Spigot 1.21+.
 
 ### Menu options
 
-| Builder method | |
+| Builder method | What it does |
 |---|---|
 | `title(String)` / `titleComponent(Component)` | `&a`, `&l`, hex `&#FF8800`; Adventure components on Paper (custom-font texture titles) |
 | `rows(int)` / `layout(String...)` | size; a layout sets the rows itself |
@@ -290,7 +284,7 @@ items:
   X: { material: BARRIER, name: "&cClose", actions: [close] }
 ```
 
-| Item key | |
+| Item key | Meaning |
 |---|---|
 | `material` | Bukkit material name |
 | `name`, `lore` | text with colors and `{player}` |
@@ -298,7 +292,7 @@ items:
 | `slot` / `slots` | slot numbers instead of a layout key |
 | `actions`, `left-actions`, `right-actions` | what a click does |
 
-| Action | |
+| Action | What it does |
 |---|---|
 | `message: text` | chat message to the player |
 | `command: cmd` | run as the player |
@@ -323,19 +317,19 @@ prevent bugs and the error messages, in under 200 lines. Copy the folder into yo
 sequenceDiagram
     participant C as Client
     participant S as Server
-    rect rgb(80, 30, 30)
+    rect rgba(248, 113, 113, 0.15)
     Note over C,S: Typical library
     S->>C: Close window
     Note over C: world visible, mouse grabbed
     S->>C: Open window
     Note over C: mouse released at screen center
     end
-    rect rgb(25, 70, 40)
+    rect rgba(74, 222, 128, 0.15)
     Note over C,S: BekaGUI, other size
     S->>C: Open window (no close before it)
     Note over C: screen to screen, mouse untouched
     end
-    rect rgb(25, 70, 40)
+    rect rgba(74, 222, 128, 0.15)
     Note over C,S: BekaGUI, same size
     S->>C: Set changed slots + new title
     end
