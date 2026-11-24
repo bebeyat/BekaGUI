@@ -15,7 +15,7 @@
 **a menu never closes to show another menu.**
 
 <p align="center">
-  <img src="docs/images/animated-v2.gif" alt="A crate spin at game speed. Other libraries close and reopen the window on every update; BekaGUI never closes it." width="100%">
+  <img src="docs/images/crate-spin.gif" alt="A crate spin at game speed. Other libraries close and reopen the window on every update; BekaGUI never closes it." width="100%">
 </p>
 <p align="center"><sub>A crate spin at normal game speed. Left: the window closes and reopens on every update. Right: BekaGUI, one window, the mouse never moves.</sub></p>
 
