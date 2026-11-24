@@ -1,0 +1,52 @@
+# A menu without Java. File name = menu id ("example").
+# Open with:  /bekagui yaml example     Reload after editing:  /bekagui reload
+title: "&8Hello &b{player}"
+
+# 9 characters per row, 1-6 rows. '.' = empty. Every other character is a key under "items".
+layout:
+  - "#########"
+  - "#.A.B.C.#"
+  - "<###X####"
+
+items:
+  "#":
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+
+  A:
+    material: DIAMOND
+    name: "&bFree diamond"
+    lore:
+      - "&7Left click: get one"
+      - "&7Right click: just a message"
+    glow: true
+    left-actions:
+      - "console: give {player} diamond 1"
+      - "sound: entity.experience_orb.pickup"
+      - "message: &aHere you go, {player}!"
+    right-actions:
+      - "message: &7You right clicked."
+
+  B:
+    material: NAME_TAG
+    name: "&eChange the title"
+    actions:
+      - "title: &6The title changed, the window did not close"
+
+  C:
+    material: COMPASS
+    name: "&dRun /spawn"
+    actions:
+      - "command: spawn"
+
+  "<":
+    material: ARROW
+    name: "&7« Back"
+    actions:
+      - back
+
+  X:
+    material: BARRIER
+    name: "&cClose"
+    actions:
+      - close

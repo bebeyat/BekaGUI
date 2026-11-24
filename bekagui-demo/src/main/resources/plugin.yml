@@ -1,0 +1,14 @@
+name: BekaGUIDemo
+version: ${project.version}
+main: dev.bekagui.demo.DemoPlugin
+api-version: "1.14"
+folia-supported: true
+description: Shows every BekaGUI feature. Menus switch without ever closing.
+commands:
+  bekagui:
+    description: Opens the BekaGUI demo
+    usage: "/bekagui [yaml <menu>|reload]"
+    permission: bekagui.demo
+permissions:
+  bekagui.demo:
+    default: op
