@@ -15,7 +15,7 @@
 **a menu never closes to show another menu.**
 
 <p align="center">
-  <img src="docs/images/animated.gif" alt="A menu that changes every second. Other libraries close and reopen the window on every change; BekaGUI never closes it." width="100%">
+  <img src="docs/images/animated-v2.gif" alt="A menu that changes every second. Other libraries close and reopen the window on every change; BekaGUI never closes it." width="100%">
 </p>
 <p align="center"><sub>The same animated menu, one change per second. Left: close + reopen on every change. Right: BekaGUI.</sub></p>
 
@@ -31,7 +31,7 @@ and players think they clicked something wrong. BekaGUI never does that.
 | call `update()` / auto refresh | re-renders and sends only the changed slots | live values, no flicker |
 
 <p align="center">
-  <img src="docs/images/no-close.gif" alt="Switching to a bigger menu: other libraries flash the world and center the mouse, BekaGUI does not." width="100%">
+  <img src="docs/images/no-close-v2.gif" alt="Switching to a bigger menu: other libraries flash the world and center the mouse, BekaGUI does not." width="100%">
 </p>
 <p align="center"><sub>Opening a menu of another size from a button.</sub></p>
 
@@ -149,7 +149,7 @@ Build a menu once and open it for as many players as you like. Each opening gets
 
 ### Dynamic content, state and live updates
 
-<p align="center"><img src="docs/images/counter.gif" alt="Live counter: the title and items change in the same window" width="420"></p>
+<p align="center"><img src="docs/images/counter-v2.gif" alt="Live counter: the title and items change in the same window" width="420"></p>
 
 ```java
 Menu counter = Menu.builder()
@@ -177,7 +177,7 @@ Menu counter = Menu.builder()
 
 ### Pages
 
-<p align="center"><img src="docs/images/pages.gif" alt="Paging: arrows change only the items and the title" width="320"></p>
+<p align="center"><img src="docs/images/pages-v2.gif" alt="Paging: arrows change only the items and the title" width="320"></p>
 
 ```java
 Menu list = Menu.builder()
@@ -210,7 +210,7 @@ Menu confirm = Menu.builder()
 
 ### Text input
 
-<p align="center"><img src="docs/images/text-input.gif" alt="Typing in the anvil, then the results open in the same window" width="420"></p>
+<p align="center"><img src="docs/images/text-input-v2.gif" alt="Typing in the anvil, then the results open in the same window" width="420"></p>
 
 ```java
 TextInput.create()
