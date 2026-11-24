@@ -15,8 +15,9 @@
 **a menu never closes to show another menu.**
 
 <p align="center">
-  <img src="docs/images/no-close.gif" alt="Other libraries close the window, the world flashes and the mouse jumps to the center. BekaGUI switches in the same window." width="100%">
+  <img src="docs/images/animated.gif" alt="A menu that changes every second. Other libraries close and reopen the window on every change; BekaGUI never closes it." width="100%">
 </p>
+<p align="center"><sub>The same animated menu, one change per second. Left: close + reopen on every change. Right: BekaGUI.</sub></p>
 
 Most GUI libraries close the window and open a new one whenever a button leads to another menu. For a few
 milliseconds the player sees the world (much longer on high ping), the mouse is thrown to the middle of the screen,
@@ -28,6 +29,11 @@ and players think they clicked something wrong. BekaGUI never does that.
 | open a menu of **another size** | opens it over the current one, no close packet | an instant switch, the mouse stays put |
 | ask for **text** (anvil) | opens the anvil over the menu, no close | an instant switch |
 | call `update()` / auto refresh | re-renders and sends only the changed slots | live values, no flicker |
+
+<p align="center">
+  <img src="docs/images/no-close.gif" alt="Switching to a bigger menu: other libraries flash the world and center the mouse, BekaGUI does not." width="100%">
+</p>
+<p align="center"><sub>Opening a menu of another size from a button.</sub></p>
 
 ## Features
 
@@ -143,6 +149,8 @@ Build a menu once and open it for as many players as you like. Each opening gets
 
 ### Dynamic content, state and live updates
 
+<img src="docs/images/counter.gif" alt="Live counter: the title and items change in the same window" align="right" width="360">
+
 ```java
 Menu counter = Menu.builder()
         .layout(
@@ -167,7 +175,11 @@ Menu counter = Menu.builder()
         .build();
 ```
 
+<br clear="right">
+
 ### Pages
+
+<img src="docs/images/pages.gif" alt="Paging: arrows change only the items and the title" align="right" width="360">
 
 ```java
 Menu list = Menu.builder()
@@ -185,6 +197,8 @@ Menu list = Menu.builder()
         .build();
 ```
 
+<br clear="right">
+
 ### Confirm dialog with back
 
 `click.open(other)` remembers the current menu. `click.back()` returns to it **with its state** (page, selection).
@@ -200,7 +214,7 @@ Menu confirm = Menu.builder()
 
 ### Text input
 
-<img src="docs/images/text-input.png" alt="Anvil text input" align="right" width="320">
+<img src="docs/images/text-input.gif" alt="Typing in the anvil, then the results open in the same window" align="right" width="360">
 
 ```java
 TextInput.create()
