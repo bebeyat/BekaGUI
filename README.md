@@ -15,9 +15,9 @@
 **a menu never closes to show another menu.**
 
 <p align="center">
-  <img src="docs/images/animated-v2.gif" alt="A menu that changes every second. Other libraries close and reopen the window on every change; BekaGUI never closes it." width="100%">
+  <img src="docs/images/animated-v2.gif" alt="A crate spin at game speed. Other libraries close and reopen the window on every update; BekaGUI never closes it." width="100%">
 </p>
-<p align="center"><sub>The same animated menu, one change per second. Left: close + reopen on every change. Right: BekaGUI.</sub></p>
+<p align="center"><sub>A crate spin at normal game speed. Left: the window closes and reopens on every update. Right: BekaGUI, one window, the mouse never moves.</sub></p>
 
 Most GUI libraries close the window and open a new one whenever a button leads to another menu. For a few
 milliseconds the player sees the world (much longer on high ping), the mouse is thrown to the middle of the screen,
